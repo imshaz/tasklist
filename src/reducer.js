@@ -35,7 +35,7 @@ const rootReducer = function (state = inittialState, action) {
             const {index, time} = action.payload
             
             return state.map((item, i) => {
-                if (index !== index) {
+                if (index !== i) {
                   return item
                 }
                 return {
