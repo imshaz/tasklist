@@ -1,0 +1,35 @@
+.App {
+  text-align: center;
+}
+
+
+ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  
+  background-color: blueviolet;
+}
+
+ul li{
+  display: inline;
+  text-decoration: none !important;
+  margin: 10px 30px;
+
+  /* padding: ; */
+}
+
+li a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+
+.container{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+}
