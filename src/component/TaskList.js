@@ -3,7 +3,7 @@ import TaskItem from './TaskItem'
 
 export default function TaskList() {
 
-    const [item, setItem] = useState([
+    const [tasks, setItem] = useState([
         {
             url: "../assets/images/task.jpg",
             title: 'userName 1',
@@ -27,7 +27,7 @@ export default function TaskList() {
         <div>
             {
 
-                item.map(task => {
+                tasks.map(task => {
                     return <TaskItem data={task} />
                 })
             }
