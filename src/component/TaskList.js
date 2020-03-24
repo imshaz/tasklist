@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import TaskItem from './TaskItem'
+import {  connect } from 'react-redux';
+ function TaskList(props) {
 
+<<<<<<< HEAD
 export default function TaskList() {
 
     const [tasks, setItem] = useState([
@@ -28,6 +31,14 @@ export default function TaskList() {
             {
 
                 tasks.map(task => {
+=======
+    
+    console.log(props.items)
+    return (
+        <div>
+            {
+                props.items.map(task => {
+>>>>>>> 76c63b031da0015bd7af0b58563c2ff2b312e972
                     return <TaskItem data={task} />
                 })
             }
@@ -36,3 +47,10 @@ export default function TaskList() {
         </div>
     )
 }
+const mapStateToProps = state => {
+    return {
+      items: state
+    };
+  };
+
+export default connect(mapStateToProps)(TaskList)
