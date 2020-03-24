@@ -3,14 +3,12 @@ import TaskItem from './TaskItem'
 import {  connect } from 'react-redux';
  function TaskList(props) {
 
-    
-    console.log(props.items)
+
     return (
         <div>
             {
-                props.items.map(task => {
-                    return <TaskItem data={task} />
-
+                props.tasks.map((task,index) => {
+                    return <TaskItem key={index} data={task} index={index} />
                 })
             }
         </div>
