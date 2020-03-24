@@ -15,7 +15,7 @@ let inittialState = [
 
     },
     {
-        url: "../assets/images/task.jpg",
+        // url: "src\assets\images\task.jpg",
         title: 'userName 3',
         description: "description 3",
         time: '',

@@ -1,46 +1,41 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Avatar from "@material-ui/core/Avatar";
 import moment from 'moment'
-
 import { connect } from 'react-redux'
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    display: "flex",
-    "& > *": {
-      margin: theme.spacing(1)
-    }
-  }
-}));
+import avatar from '../assets/images/task.jpg'
 
 
 function TaskItem(props) {
-  const { url, title, description, time, completed } = props.data;
+    const {  title, description, time, completed } = props.data;
 
-  function handleChange() {
-    props.handleUpdate({data: props.data, index:props.index, time: moment().format('h:mm')})
-}
-  const classes = useStyles();
-  return (
-    <div id="container" className={classes.root}>
-      <div>
-        <Avatar alt="task" src={url} />
-      </div>
-      <div>
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
-      <div>
-        {!completed ? <input type="checkbox" onChange={()=>{handleChange()}} /> : <div>{time}</div>}
-      </div>
-    </div>
+    function handleChange() {
+        props.handleUpdate({ data: props.data, index: props.index, time: moment().format('h:mm') })
+    }
+    
+    return (
+
+        <div className="outerwrap-user">
+            <div className="innerwrap-user">
+                <div className="user-img">
+                    <img src={avatar} alt="" />
+                </div>
+                <div className="user-text">
+                    <h4>{title}</h4>
+                    <p>{description}</p>
+                </div>
+                <div className="time">
+                    {!completed ? <input type="checkbox" onChange={() => { handleChange() }} /> : <span>{time}</span>}
+                    {/* <span>{time}</span> */}
+                </div>
+            </div>
+
+            </div>
+   
   );
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-      handleUpdate: (payload) => dispatch({ type: 'UPDATE', payload:payload}),
+                handleUpdate: (payload) => dispatch({ type: 'UPDATE', payload:payload}),
     }
   };
 
