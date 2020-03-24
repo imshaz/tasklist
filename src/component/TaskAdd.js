@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import TaskItem from './TaskItem'
 import { useHistory } from "react-router-dom";
 function TaskAdd(props) {
     let history = useHistory();
@@ -9,7 +8,13 @@ function TaskAdd(props) {
         if(description.length<2 || url.length<5){
             return
         }
-        props.handleAdd({description, url})
+
+        let task = {};
+        task.url="";
+        task.title="-";
+        task.description=description;
+        task.url=url
+        props.handleAdd(task)
         history.push('/')
     }
 
@@ -17,10 +22,10 @@ function TaskAdd(props) {
     const [url, setUrl]= React.useState('')
     return (
         <div>
-            <label for="description">Task Desciption</label>
+            <label htmlFor="description">Task Desciption</label>
             <input type="text" id="description" name="description" onChange={(e)=>{setDescription(e.target.value)}} value={description}/>
 
-            <label for="url">Avatar URL</label>
+            <label htmlFor="url">Avatar URL</label>
             <input type="url" id="url" name="url"  value={url} onChange={(e)=>{setUrl(e.target.value)}}/>
             <button onClick={clickHandler}>Add</button>
         </div>

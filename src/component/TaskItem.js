@@ -32,7 +32,7 @@ function TaskItem(props) {
         <p>{description}</p>
       </div>
       <div>
-        <p>{!completed ? <input type="checkbox" onChange={()=>{handleChange()}} /> : <div>{time}</div>}</p>
+        {!completed ? <input type="checkbox" onChange={()=>{handleChange()}} /> : <div>{time}</div>}
       </div>
     </div>
   );

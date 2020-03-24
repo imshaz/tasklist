@@ -27,13 +27,11 @@ let inittialState = [
 const rootReducer = function (state = inittialState, action) {
     switch (action.type) {
       case "ADD":
-          console.log(action.payload)
+         
         return [...state , action.payload]
 
         case "UPDATE":
-            console.log(action.payload)
-            const {index, time} = action.payload
-            
+            const {index, time} = action.payload            
             return state.map((item, i) => {
                 if (index !== i) {
                   return item

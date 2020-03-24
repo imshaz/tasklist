@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import TaskList from './component/TaskList';
 import TaskAdd from './component/TaskAdd';
