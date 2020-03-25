@@ -5,18 +5,17 @@ import avatar from '../assets/images/task.jpg'
 
 
 function TaskItem(props) {
-    const {  title, description, time, completed } = props.data;
+    const { url, title, description, time, completed } = props.data;
 
     function handleChange() {
         props.handleUpdate({ data: props.data, index: props.index, time: moment().format('h:mm') })
     }
     
     return (
-
         <div className="outerwrap-user">
             <div className="innerwrap-user">
                 <div className="user-img">
-                    <img src={avatar} alt="" />
+                    <img src={url?url:avatar} alt="" />
                 </div>
                 <div className="user-text">
                     <h4>{title}</h4>
@@ -27,7 +26,6 @@ function TaskItem(props) {
                     {/* <span>{time}</span> */}
                 </div>
             </div>
-
             </div>
    
   );
