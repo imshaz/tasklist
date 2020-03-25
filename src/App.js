@@ -14,7 +14,6 @@ function App(props) {
     <div className="App">
      
       <div>
-
         <Switch>
           <Route path="/add">
             <TaskAdd />

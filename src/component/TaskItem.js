@@ -13,7 +13,6 @@ function TaskItem(props) {
 
     return (
 
-
         <div className="outerwrap-user">
             <div className="innerwrap-user">
                 <div className="user-img">
@@ -27,7 +26,7 @@ function TaskItem(props) {
                     {/* {!completed ? <input type="checkbox" onChange={() => { handleChange() }} /> : <span>{time}</span>} */}
                     {/* <span>{time}</span> */}
                     <div class="form">
-                        <input type="checkbox" class="larger" name="checkBox2" onChange={() => { handleChange() }} />
+                    {!completed ?<input type="checkbox" class="larger" name="checkBox2" onChange={() => { handleChange() }} />: <span>{time}</span>}
                     </div>
                 </div>
             </div>
