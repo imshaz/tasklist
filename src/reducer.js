@@ -1,13 +1,13 @@
 let inittialState = [
     {
-        url: "../assets/images/task.jpg",
+        // url: "../assets/images/task.jpg",
         title: 'userName',
         description: "description 1",
         time: '',
         completed:true
     },
     {
-        url: "../assets/images/task.jpg",
+        // url: "../assets/images/task.jpg",
         title: 'userName',
         description: "description 2",
         time: '10:12',
