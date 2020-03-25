@@ -1,14 +1,14 @@
 let inittialState = [
     {
         url: "../assets/images/task.jpg",
-        title: 'userName 1',
+        title: 'userName',
         description: "description 1",
         time: '',
         completed:true
     },
     {
         url: "../assets/images/task.jpg",
-        title: 'userName 2',
+        title: 'userName',
         description: "description 2",
         time: '10:12',
         completed:true
@@ -16,7 +16,7 @@ let inittialState = [
     },
     {
         // url: "src\assets\images\task.jpg",
-        title: 'userName 3',
+        title: 'userName',
         description: "description 3",
         time: '',
         completed:false

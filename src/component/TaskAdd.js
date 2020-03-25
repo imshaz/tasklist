@@ -11,7 +11,7 @@ function TaskAdd(props) {
 
         let task = {};
         task.url = "";
-        task.title = "         ";
+        task.title = "userName";
         task.description = description;
         task.url = url
         props.handleAdd(task)
