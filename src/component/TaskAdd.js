@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { useHistory } from "react-router-dom";
 function TaskAdd(props) {
     let history = useHistory();
+
+    console.log('history',history)
     const clickHandler = () => {
 
         if (description.length < 2 || url.length < 5) {

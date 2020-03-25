@@ -8,22 +8,12 @@ import {
   Route,
   Link
 } from "react-router-dom";
-function App() {
+function App(props) {
+  console.log('app.js', props)
   return (
     <div className="App">
      
-     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/add">+</Link>
-            </li>
-          </ul>
-        </nav>
 
         <Switch>
           <Route path="/add">
@@ -34,7 +24,7 @@ function App() {
           </Route>
         </Switch>
       </div>
-    </Router>
+    {/* </Router> */}
     </div>
   );
 }

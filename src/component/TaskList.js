@@ -1,11 +1,16 @@
 import React from 'react'
 import TaskItem from './TaskItem'
 import {  connect } from 'react-redux';
+
+import {
+    withRouter, Link
+  } from "react-router-dom";
  function TaskList(props) {
 
 
     return (
         <div>
+            
             {
                 props.tasks.map((task,index) => {
                     return <TaskItem key={index} data={task} index={index} />
@@ -21,4 +26,4 @@ const mapStateToProps = state => {
     };
   };
 
-export default connect(mapStateToProps)(TaskList)
+export default connect(mapStateToProps)(withRouter(TaskList))
