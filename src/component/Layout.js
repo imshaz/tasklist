@@ -15,7 +15,7 @@ function Layout(props) {
               <Link to="/">Home</Link>
             </li>
              
-            <li>
+            <li className="addRoute">
             {pathname!=="/add"?<Link to="/add">+</Link>:null}
             </li>
           </ul>
