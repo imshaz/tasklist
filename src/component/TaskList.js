@@ -1,9 +1,9 @@
 import React from 'react'
 import TaskItem from './TaskItem'
-import {  connect } from 'react-redux';
+import { connect } from 'react-redux';
 
 import {
-    withRouter, Link
+    withRouter
   } from "react-router-dom";
  function TaskList(props) {
 
